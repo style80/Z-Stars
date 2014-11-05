@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/*! ==============================================================
+    Project Name: Z-Stars 1.0
+    Date        : 2014.07.09
+    Author      : XL
+    ============================================================== */
+/* $users-a:   aaaaa;
+$users-b:   bbbbb;
+
+$Styep: (
+        0:  $solid,
+        1:  $hollow,
+        2:  $users-a,
+        3:  $users-b
+        ...
+); */
+.stars {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1; }
+  .stars:before, .stars:after {
+    position: relative;
+    color: #ff8800;
+    font-size: 1em;
+    letter-spacing: 4px;
+    content: "☆☆☆☆☆"; }
+  .stars:after {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: #ff8800;
+    content: "★★★★★"; }
+  .stars.st-1:after {
+    width: calc(10% - 2px ); }
+  .stars.st-2:after {
+    width: calc(20% - 2px ); }
+  .stars.st-3:after {
+    width: calc(30% - 2px ); }
+  .stars.st-4:after {
+    width: calc(40% - 2px ); }
+  .stars.st-5:after {
+    width: calc(50% - 2px ); }
+  .stars.st-6:after {
+    width: calc(60% - 2px ); }
+  .stars.st-7:after {
+    width: calc(70% - 2px ); }
+  .stars.st-8:after {
+    width: calc(80% - 2px ); }
+  .stars.st-9:after {
+    width: calc(90% - 2px ); }
+  .stars.st-10:after {
+    width: calc(100% - 2px ); }
+
+.stars2 {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1; }
+  .stars2:before, .stars2:after {
+    position: relative;
+    color: #ff8800;
+    font-size: 1em;
+    letter-spacing: 4px;
+    content: "☆☆☆☆☆";
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2); }
+  .stars2:after {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: #ff8800;
+    content: "★★★★★"; }
+  .stars2.st-1:after {
+    width: calc(10% - 2px ); }
+  .stars2.st-2:after {
+    width: calc(20% - 2px ); }
+  .stars2.st-3:after {
+    width: calc(30% - 2px ); }
+  .stars2.st-4:after {
+    width: calc(40% - 2px ); }
+  .stars2.st-5:after {
+    width: calc(50% - 2px ); }
+  .stars2.st-6:after {
+    width: calc(60% - 2px ); }
+  .stars2.st-7:after {
+    width: calc(70% - 2px ); }
+  .stars2.st-8:after {
+    width: calc(80% - 2px ); }
+  .stars2.st-9:after {
+    width: calc(90% - 2px ); }
+  .stars2.st-10:after {
+    width: calc(100% - 2px ); }
+
+.stars3 {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1; }
+  .stars3:before, .stars3:after {
+    position: relative;
+    color: #dddddd;
+    font-size: 1em;
+    letter-spacing: 4px;
+    content: "☆☆☆☆☆"; }
+  .stars3:after {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: red;
+    content: "★★★★★"; }
+  .stars3.st-1:after {
+    width: calc(10% - 2px ); }
+  .stars3.st-2:after {
+    width: calc(20% - 2px ); }
+  .stars3.st-3:after {
+    width: calc(30% - 2px ); }
+  .stars3.st-4:after {
+    width: calc(40% - 2px ); }
+  .stars3.st-5:after {
+    width: calc(50% - 2px ); }
+  .stars3.st-6:after {
+    width: calc(60% - 2px ); }
+  .stars3.st-7:after {
+    width: calc(70% - 2px ); }
+  .stars3.st-8:after {
+    width: calc(80% - 2px ); }
+  .stars3.st-9:after {
+    width: calc(90% - 2px ); }
+  .stars3.st-10:after {
+    width: calc(100% - 2px ); }
+
+.stars4 {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1; }
+  .stars4:before, .stars4:after {
+    position: relative;
+    color: #dddddd;
+    font-size: 1em;
+    letter-spacing: 4px;
+    content: "★★★★★"; }
+  .stars4:after {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: red;
+    content: "★★★★★"; }
+  .stars4.st-1:after {
+    width: calc(10% - 2px ); }
+  .stars4.st-2:after {
+    width: calc(20% - 2px ); }
+  .stars4.st-3:after {
+    width: calc(30% - 2px ); }
+  .stars4.st-4:after {
+    width: calc(40% - 2px ); }
+  .stars4.st-5:after {
+    width: calc(50% - 2px ); }
+  .stars4.st-6:after {
+    width: calc(60% - 2px ); }
+  .stars4.st-7:after {
+    width: calc(70% - 2px ); }
+  .stars4.st-8:after {
+    width: calc(80% - 2px ); }
+  .stars4.st-9:after {
+    width: calc(90% - 2px ); }
+  .stars4.st-10:after {
+    width: calc(100% - 2px ); }
+
+/*# sourceMappingURL=stars.css.map */

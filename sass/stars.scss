@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/*! ==============================================================
+    Project Name: Z-Stars 1.0
+    Date        : 2014.07.09
+    Author      : XL
+    ============================================================== */
+
+$solid:     ☆☆☆☆☆!default;
+$hollow:    ★★★★★!default;
+
+// 二期导入 自定义星儿样式库
+// $list: a b, c d, e f;
+/* $users-a:   aaaaa;
+$users-b:   bbbbb;
+
+$Styep: (
+        0:  $solid,
+        1:  $hollow,
+        2:  $users-a,
+        3:  $users-b
+        ...
+); */
+
+
+@mixin stars(
+        $size:      14px,       //大小
+        $color:     #f80,       //前景色
+        $bg-color:  $color,     //背景色
+        $spacing:   4px,        //间距
+        $bg-icon:   $solid,     //背景样式
+        $icon:      $hollow     //前景样式   
+    ){
+        position:       relative;
+        display:        inline-block;
+        // font-size: xx-small;
+        font-size:      $size;
+        font-weight:    normal;
+        line-height:    1;
+        &:before,&:after{
+            position:       relative;
+            color:          $bg-color;
+            font-size:      1em;
+            letter-spacing: $spacing;
+            // content:        "#{map-get($Styep, $bg-icon)}";
+            content:        "#{$bg-icon}";
+            @content;
+        }
+
+        &:after{
+            overflow: hidden;
+            position: absolute;
+            top:      0;
+            bottom:   0;
+            left:     0;
+            color:    $color;
+            content:  "#{$icon}";
+        }
+        // 核心部分
+        // -------------------------------------------------------------
+        // 1★ == 10% * 2 ; 5★ == 100% ; - (letter-spacing/2) 间距差值
+        // 循环出 .st-1 至 .st-10 名字; 
+        // .st-1{width:calc(10% - (letter-spacing/2));}
+        // .st-10{width:calc(100% - (letter-spacing/2));}
+        // -------------------------------------------------------------
+        @for $i from 1 through 10{
+            $a: 10% * $i;
+            $b: $spacing/2;
+            &.st-#{$i}{
+                &:after{
+                    // width: calc( (10% * #{$i}) - (#{$spacing}/2) );
+                    width: calc( #{$a} - #{$b} );
+
+                }
+            } 
+        }
+    }
+
+
+
+
+
+.stars{
+    @include stars;
+}
+
+.stars2{
+    @include stars{
+       text-shadow: 1px 1px 0 rgba(0,0,0,.2);
+    };
+    
+}
+
+.stars3{
+    @include stars(20px, red, #ddd, 4px);
+}
+
+.stars4{
+    @include stars(20px, red, #ddd, 4px, $hollow);
+}
