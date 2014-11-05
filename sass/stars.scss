@@ -80,21 +80,21 @@ $Styep: (
 
 
 
-.stars{
-    @include stars;
-}
+// .stars{
+//     @include stars;
+// }
 
-.stars2{
-    @include stars{
-       text-shadow: 1px 1px 0 rgba(0,0,0,.2);
-    };
+// .stars2{
+//     @include stars{
+//        text-shadow: 1px 1px 0 rgba(0,0,0,.2);
+//     };
     
-}
+// }
 
-.stars3{
-    @include stars(20px, red, #ddd, 4px);
-}
+// .stars3{
+//     @include stars(20px, red, #ddd, 4px);
+// }
 
-.stars4{
-    @include stars(20px, red, #ddd, 4px, $hollow);
-}
+// .stars4{
+//     @include stars(20px, red, #ddd, 4px, $hollow);
+// }
